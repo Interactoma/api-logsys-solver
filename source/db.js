@@ -17,8 +17,7 @@ async function name() {
     try {
         await tms.authenticate();
         console.log('Connection tms has been established successfully.');
-        await erp.authenticate();
-        console.log('Connection erp has been established successfully.');
+        
       } catch (error) {
         console.error('Unable to connect to the database:', error);
       }

@@ -1,5 +1,5 @@
 const app = require("./source/app");
-const { conn, conn2 } = require("./source/db");
+const { conn,  } = require("./source/db");
 
 conn.sync({ force: false }).then(() => {
 	app.listen(3001, async () => {
@@ -7,8 +7,3 @@ conn.sync({ force: false }).then(() => {
 	});
 });
 
-conn2.sync({ force: false }).then(() => {
-	app.listen(3002, async () => {
-		console.log("server listening on port 3002");
-	});
-});
